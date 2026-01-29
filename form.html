@@ -42,8 +42,9 @@
 
             <h2 class="form-section-title">Enter Your Information</h2>
 
-            <form class="booking-form" id="bookingForm" action="./confirmation.html" method="POST" data-netlify="true" name="booking">
+            <form class="booking-form" id="bookingForm" method="POST" data-netlify="true" name="booking" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="booking" />
+                <input type="hidden" name="bot-field" />
                 <div class="form-row">
                     <div class="form-group">
                         <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First Name" required>
@@ -93,6 +94,11 @@
 
                 <button type="submit" class="form-submit-btn cta-button">Submit Booking Form</button>
             </form>
+            <script>
+            if (window.location.search.includes('success=true')) {
+                window.location.href = './confirmation.html';
+            }
+            </script>
         </div>
     </main>
 </body>
