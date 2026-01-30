@@ -71,17 +71,20 @@ body{
 }
 
 .promo-banner {
-    width: 100%;
+ width: 100%;
     background-color: #46C4E0;
     text-align: center;
-    padding: 1rem 1.2rem;
-    box-shadow: 0 6px 16px rgba(70, 196, 224, 0.3);
+    padding: 0.4rem 0;   /* reduce vertical height */
+    box-shadow: none;   /* remove visual weight */
+
+
 }
 
 .promo-banner-text {
-    font-size: 1.4rem;
-    font-weight: 700;
-    font-family: 'Baloo 2', sans-serif;
+  font-size: 1.1rem;  /* smaller text */
+    font-weight: 600;   /* lighter */
+    line-height: 1.2;
+    margin: 0;
     color: #ffffff;
 }
 
@@ -322,6 +325,7 @@ body{
     padding: 2.5rem;
     box-shadow: 0 4px 15px rgba(70, 196, 224, 0.5);
     display: block;
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -420,6 +424,21 @@ body{
 }
 
 /* Contact Section */
+
+.map-image{
+    display: block;
+    width: 35rem;
+    height: 28rem;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.location-icon {
+    width: 3rem;
+    height: 3.5rem;
+    color: #FD6B65;
+}
+
 
 .contact-section{
     display: grid;
@@ -677,7 +696,7 @@ hr{
     transition: all 0.15s;
     line-height: .9;
     letter-spacing: .75px;
-    display: block;
+    display: none;
 }
 
 .footer-cta-button:hover{
@@ -746,6 +765,7 @@ hr{
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .form-label {

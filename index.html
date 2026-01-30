@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Happy Paws Veterinary Clinic - Free first vet checkup for new pet owners. Limited-time promo.">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLWHN6DBM9"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FLWHN6DBM9');
-    </script>
-
+   
+      <link rel="preload" href="./Website & Mobile - Promo Assets/hero-image (1).jpg" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="./Website & Mobile - Promo Assets/top-logo.png" as="image">
-    <link rel="preload" href="./Website & Mobile - Promo Assets/hero-image.jpg" as="image">
-    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  
+      
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+2:wght@700&family=Poppins:wght@400;600&display=swap"
+      onload="this.rel='stylesheet'">
+
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Baloo+2:wght@700&family=Poppins:wght@400;600&display=swap">
+</noscript>
 
     <link rel="preload" href="./style.css" as="style">
     <link rel="stylesheet" href="./style.css">
@@ -42,7 +40,14 @@
 
             <div class="promo-body">
                 <div class="promo-media">
-                    <img class="promo-hero" src="./Website & Mobile - Promo Assets/hero-image.jpg" alt="Veterinarian holding a dog" width="620" height="420" loading="eager"/>
+                    <img class="promo-hero"
+                    src="./Website & Mobile - Promo Assets/hero-image (1).jpg"
+                    alt="Veterinarian holding a dog"
+                    width="620"
+                    height="420"
+                    loading="eager"
+                    fetchpriority="high">
+
                 </div>
 
                 <div class="promo-text">
@@ -53,11 +58,7 @@
                     <p class="promo-subtitle">
                         Welcome your new pet with confidence. Get a professional health check from our friendly veterinary team — on us.
                     </p>
-                    <a class="promo-cta cta-button" href="./form.html"
-                       onclick="gtag('event', 'promo_claim_click', {
-                        event_category: 'CTA',
-                        event_label: 'Promo'
-                        });">Claim Free checkup</a>
+                    <a class="promo-cta cta-button" href="./form.html">Claim Free checkup</a>
                 </div>
             </div>
         </section>
@@ -90,7 +91,7 @@
             
 
             <div class="who-card">
-                <img class="who-image" src="./Website & Mobile - Promo Assets/who-is-this-for-image.jpg" alt="Cat with stethoscope" width="520" height="380" loading="lazy">
+                <img class="who-image" src="./Website & Mobile - Promo Assets/who-is-this-for-image.jpg" alt="Cat with stethoscope" width="520" height="380" loading="lazy" >
                 <div class="who-content">
                      <h2 id="who-is-this-for" class="promo-section-title">Who is this for?</h2>
         
@@ -134,14 +135,14 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <img class="testimonial-img" src="./Website & Mobile - Promo Assets/reviews-image2.png" alt="Customer testimonial" width="100" height="100" loading="lazy">
+                    <img class="testimonial-img" src="./Website & Mobile - Promo Assets/reviews-image2.png" alt="Customer testimonial" width="100" height="100" loading="lazy" >
                     <p class="quote">“</p>
                     <p class="testimonial-text">The vaccination process was quick and gentle. The staff explained everything and made us feel at ease.</p>
                     <p class="testimonial-name">Anna L. / Shera</p>
                 </div>
 
                 <div class="testimonial-card">
-                    <img class="testimonial-img" src="./Website & Mobile - Promo Assets/reviews-image3.png" alt="Customer testimonial" width="100" height="100" loading="lazy">
+                    <img class="testimonial-img" src="./Website & Mobile - Promo Assets/reviews-image3.png" alt="Customer testimonial" width="100" height="100" loading="lazy" >
                     <p class="quote">“</p>
                     <p class="testimonial-text">Professional, caring, and very organized. I trust Happy Paws with my puppy’s health.</p>
                     <p class="testimonial-name">Keith D. / Max</p>
@@ -151,7 +152,12 @@
 
         <section class="contact-section">
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.3560845678053!2d121.06287447465343!3d14.521613185955381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8b19b92b59b%3A0xb12e1274084a5575!2sAcacia%20Town%20Center!5e0!3m2!1sen!2sus!4v1769004044495!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Happy Paws Veterinary Clinic Location Map"></iframe>
+
+                <a href="https://www.google.com/maps/place/Acacia+Town+Center/@14.5216132,121.0628745,17z/data=!3m1!4b1!4m6!3m5!1s0x3397c8b19b92b59b:0xb12e1274084a5575!8m2!3d14.5216132!4d121.0654494!16s%2Fg%2F12hkhbjbv?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+                  <img class="map-image" src="./Website & Mobile - Promo Assets/visit-image (2).jpg" alt="Map location">
+                    </a>
+
+        
             </div>
 
             <div class="contact-info">
@@ -161,16 +167,41 @@
                 <div class="contact-details">
                 
                     <div class="location-box">
-                        <ion-icon class="location-icon" name="location-outline"></ion-icon>
+                   
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path>
+  <circle cx="12" cy="10" r="3"></circle>
+</svg>
+
                         <p class="contact-address">Acacia Town Center, Acacia Estates, Acacia Ave, Taguig</p>
                     </div>
 
                     <div class="phone-box">
-                        <ion-icon class="call-icon" name="call-outline"></ion-icon>
+                        <svg class="call-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
+  19.79 19.79 0 0 1-8.63-3.07 
+  19.5 19.5 0 0 1-6-6 
+  19.79 19.79 0 0 1-3.07-8.67 
+  A2 2 0 0 1 4.11 2h3 
+  a2 2 0 0 1 2 1.72 
+  c.12.89.37 1.75.72 2.58 
+  a2 2 0 0 1-.45 2.11 
+  L8.09 9.91 
+  a16 16 0 0 0 6 6 
+  l1.5-1.29 
+  a2 2 0 0 1 2.11-.45 
+  c.83.35 1.69.6 2.58.72 
+  A2 2 0 0 1 22 16.92z"></path>
+</svg>
+
                         <p class="contact-phone">09159760258 / 09269784458</p>
                     </div>
                     <div class="mail-box">
-                        <ion-icon class="mail-icon" name="mail-outline"></ion-icon>
+                        <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+  <rect x="3" y="5" width="18" height="14" rx="2" ry="2"></rect>
+  <polyline points="3 7 12 13 21 7"></polyline>
+</svg>
+
                         <p class="contact-email">contact@happypaws.com</p>
                     </div>
                 </div>
@@ -180,16 +211,13 @@
 
     <footer class="footer-section">
         <div class="footer-container">
-            <img class="footer-logo" src="./Website & Mobile - Promo Assets/top-logo.png" alt="Happy Paws Logo" width="230" height="90" loading="lazy"/>
+            <img class="footer-logo" src="./Website & Mobile - Promo Assets/top-logo.png" alt="Happy Paws Logo" width="230" height="90" loading="lazy" />
 
             <div class="footer-cta-box">
                 <div class="footer-cta-content">
                     <p class="footer-cta-header">Limited Slots Available</p>
                     <p class="footer-cta-text">To ensure quality care, free checkups are limited per week. <strong>Appointments are first-come, first-served.</strong></p>
-                    <a class="footer-cta cta-button" href="./form.html" onclick="gtag('event', 'book_appointment_click', {
-                        event_category: 'CTA',
-                        event_label: 'Footer'
-                        });">Claim Free Check up</a>
+                    <a class="footer-cta cta-button" href="./form.html">Claim Free Check up</a>
                 </div>
             </div>
         </div>
@@ -198,10 +226,6 @@
       <!-- Sticky CTA for Mobile Only -->
     <div class="sticky-mobile-cta-container">
         <a class="sticky-mobile-cta cta-button" href="./form.html"
-        onclick="gtag('event', 'book_appointment_click', {
-        event_category: 'CTA',
-        event_label: 'Sticky'
-        });"
         >Claim Free Check up</a>
     </div>
 </body>

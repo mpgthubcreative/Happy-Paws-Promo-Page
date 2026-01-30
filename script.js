@@ -36,34 +36,34 @@ if (servicesCarousel) {
     updateActiveCard();
 }
 
-// Card click interaction for mobile - allow clicking to manually activate
+// Card click interaction for mobile - allow clicking to manually activate and toggle
 cards.forEach(card => {
     card.addEventListener('click', function(e) {
-        // Only apply on mobile
         if (window.innerWidth < 768) {
-            // Don't toggle if clicking the Book Now button directly
-            if (e.target.classList.contains('card-book-button')) {
+            // Don't toggle if clicking the Book Now button directly or card overlay button
+            if (e.target.classList.contains('card-book-button') || e.target.closest('.card-overlay-button')) {
                 return;
             }
-            
             e.preventDefault();
-            
-            // Remove active from all cards
-            cards.forEach(c => c.classList.remove('active'));
-            
-            // Add active to clicked card
-            this.classList.add('active');
-            
-            // Scroll to center this card
-            const cardLeft = this.offsetLeft;
-            const cardWidth = this.offsetWidth;
-            const containerWidth = servicesCarousel.clientWidth;
-            const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
-            
-            servicesCarousel.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
+            // Remove active from all other cards
+            cards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('active');
+                }
             });
+            // Toggle current card
+            this.classList.toggle('active');
+            // Scroll to center this card (if carousel exists)
+            if (servicesCarousel) {
+                const cardLeft = this.offsetLeft;
+                const cardWidth = this.offsetWidth;
+                const containerWidth = servicesCarousel.clientWidth;
+                const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+                servicesCarousel.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
@@ -91,26 +91,7 @@ if (stickyCTA && promoCard) {
     toggleStickyCTA();
 }
 
-// Service Card Mobile Touch/Click Interaction
-cards.forEach(card => {
-    // For mobile - toggle on click/touch
-    card.addEventListener('click', function(e) {
-        // Only toggle if not clicking the button
-        if (!e.target.closest('.card-overlay-button')) {
-            // Check if screen is mobile (less than 768px)
-            if (window.innerWidth < 768) {
-                // Close all other cards
-                cards.forEach(otherCard => {
-                    if (otherCard !== card) {
-                        otherCard.classList.remove('active');
-                    }
-                });
-                // Toggle current card
-                this.classList.toggle('active');
-            }
-        }
-    });
-});
+// ...existing code...
 
 // Close overlay when clicking outside on mobile
 document.addEventListener('click', function(e) {

@@ -197,6 +197,13 @@ body:has(#services) .main-header .top-logo {
     order: 2;
 }
 
+.map-image{
+
+    width: 100%;
+    height: auto;
+
+}
+
 .contact-info{
     order: 1;
    
